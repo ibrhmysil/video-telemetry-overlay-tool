@@ -20,3 +20,17 @@ https://github.com/ibrhmysil/video-telemetry-overlay
 ```bash
 pip install -r requirements.txt
 python src/video_telemetry_overlay.py --video examples/flight.avi --csv examples/telemetri.csv --out out.mp4
+```
+
+## 🕰️ Synchronized by Time Stamp
+```bash
+python src/video_telemetry_overlay.py --video flight.avi --csv telemetri.csv \
+  --csv-time-col "Gonderme Saati" --csv-time-format "%Y-%m-%d %H:%M:%S.%f" \
+  --video-start "2025-09-12 14:03:05.200" --out out.mp4
+```
+
+## #️⃣ Synchronized by Package Number
+```bash
+python src/video_telemetry_overlay.py --video flight.avi --csv telemetri.csv \
+  --packet-start 12345 --out out.mp4
+```
